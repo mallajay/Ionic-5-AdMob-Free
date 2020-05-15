@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12">
+        <ion-button
+          class="log-in-button"
+          color="primary"
+          expand="block"
+          (click)="admobService.showAdBanner()"
+        >
+          Show Ad Banner
+        </ion-button>
+      </ion-col>
+      <ion-col size="12">
+        <ion-button
+          class="log-in-button"
+          color="secondary"
+          expand="block"
+          (click)="admobService.showInterstitial()"
+        >
+          Show Interstitial
+        </ion-button>
+      </ion-col>
+      <ion-col size="12">
+        <ion-button
+          class="log-in-button"
+          color="tertiary"
+          expand="block"
+          (click)="admobService.showRewardVideoAds()"
+        >
+          Show Reward Video Ads
+        </ion-button>
+      </ion-col>
+      <ion-col size="12">
+        <ion-item lines="none">
+          <ion-label style="color: red;">{{admobService.error}}</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
